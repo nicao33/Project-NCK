@@ -1,4 +1,4 @@
-Project owner : Nicolas Prado | Dev Team - Nicolas Prado
+Project owner & Dev Team : Nicolas Prado 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Planning a registration and login system for markets or establishments 
