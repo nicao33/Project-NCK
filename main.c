@@ -16,7 +16,7 @@ typedef struct {
 User users[MAX_USERS];
 int userCount = 0;
 
-// Função para carregar os usuários do arquivo
+
 void carregarUsuarios() {
     FILE *file = fopen("users.dat", "rb");
     if (file == NULL) {
@@ -28,7 +28,7 @@ void carregarUsuarios() {
     fclose(file);
 }
 
-// Função para salvar os usuários no arquivo
+
 void salvarUsuarios() {
     FILE *file = fopen("users.dat", "wb");
     fwrite(&userCount, sizeof(int), 1, file);
@@ -36,7 +36,7 @@ void salvarUsuarios() {
     fclose(file);
 }
 
-// Função para registrar um novo usuário
+
 void registrarUsuario() {
     if (userCount >= MAX_USERS) {
         printf("Limite de usuários atingido!\n");
@@ -50,7 +50,7 @@ void registrarUsuario() {
     printf("Digite a senha: ");
     scanf("%s", password);
 
-    // Verifica se o nome de usuário já existe
+    
     for (int i = 0; i < userCount; i++) {
         if (strcmp(users[i].username, username) == 0) {
             printf("Usuário já existe!\n");
@@ -67,7 +67,7 @@ void registrarUsuario() {
     printf("Usuário registrado com sucesso!\n");
 }
 
-// Função para fazer login
+
 int fazerLogin() {
     char username[MAX_LEN], password[MAX_LEN];
 
@@ -84,10 +84,10 @@ int fazerLogin() {
     }
 
     printf("Usuário ou senha incorretos!\n");
-    return -1;  // Retorna -1 se o login falhar
+    return -1;  
 }
 
-// Função para adicionar um item
+
 void adicionarItem(int userIndex) {
     if (users[userIndex].itemCount >= MAX_ITEMS) {
         printf("Limite de itens atingido!\n");
@@ -105,7 +105,7 @@ void adicionarItem(int userIndex) {
     printf("Item adicionado com sucesso!\n");
 }
 
-// Função para listar os itens
+
 void listarItens(int userIndex) {
     printf("Itens do usuário %s:\n", users[userIndex].username);
     for (int i = 0; i < users[userIndex].itemCount; i++) {
@@ -113,7 +113,7 @@ void listarItens(int userIndex) {
     }
 }
 
-// Função principal
+
 int main() {
     carregarUsuarios();
 
