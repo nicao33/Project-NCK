@@ -19,7 +19,7 @@ int main() {
     // Chama a função para exibir as informações
     sobreMim();
     
-    printf("Obrigado por usar este programa!\n");
+    printf("Obrigado por usar este programaf!\n");
 
     return 0;
 }
