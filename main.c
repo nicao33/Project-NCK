@@ -20,7 +20,7 @@ int userCount = 0;
 void carregarUsuarios() {
     FILE *file = fopen("users.dat", "rb");
     if (file == NULL) {
-        printf("Nenhum usuário registrado ainda.\n");
+        printf("Nenhum usuário registrado ainda d .\n");
         return;
     }
     fread(&userCount, sizeof(int), 1, file);
